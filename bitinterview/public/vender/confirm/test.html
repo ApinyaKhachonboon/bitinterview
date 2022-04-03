@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Notify Mobile: Alert/Success/Confirm Dialog Examples</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="StyleSheet" href="./css/notify.css" type="text/css" media="all" />
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="./js/notify.js"></script>
+<style>
+	html,* { margin: 0; padding: 0; }
+body, button { font-family: 'Roboto Condensed'; }
+.container { margin: 70px auto; max-width: 960px; }
+.container > p { margin: 2rem auto; }
+button { padding: 5px 10px; }
+</style>
+<body>
+<div class="container">
+	<h1>Notify Mobile: Alert/Success/Confirm Dialog Examples</h1>
+	<div class="jquery-script-ads" style="margin:50px auto"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+	<p><button id="alert">Alert</button></p>
+	<p><button id="alert2">Alert With HTML Content</button></p>
+	<p><button id="suc">Success</button></p>
+	<p><button id="suc2">Success With HTML Content</button></p>
+	<p><button id="confirm">Confirmation Dialog</button></p>
+</div>
+<script>
+$(function(){
+	$('#alert').click(function(){
+		Notify.alert('Alert Dialog');
+	});
+	$('#alert2').click(function(){
+		Notify.alert({
+			title : 'Alert Dialog',
+			html : 'This is <b>Alert Dialog</b>.',
+		});
+	});
+
+	$('#suc').click(function(){
+		Notify.suc('Success Dialog');
+	});
+
+	$('#suc2').click(function(){
+		Notify.suc({
+			title : 'Success Dialog',
+			text : 'This is <b>Success Dialog</b>.',
+		});
+	});
+
+	$('#confirm').click(function(){
+		Notify.confirm({
+  title : 'jQueryScript',
+  html : '<b>Are you sure To Delete This Entry?</b>',
+  ok : function(){
+    Notify.suc('OK');
+  },
+  cancel : function(){
+    Notify.alert('cancel');
+  },
+  focus : function(){
+    Notify.alert('focus');
+  }
+});
+	});
+
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
