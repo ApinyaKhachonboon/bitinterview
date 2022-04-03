@@ -2,12 +2,21 @@
 for interview
 
 # How to install
-### 1. สร้าง database ชื่อ bitinterviewdb ส่วน username เป็น root password ไม่มี
-### 2. run คำสั่งใน terminal ด้านล่าง เพื่อสร้าง table
+### 1. สร้าง database ชื่อ 
+>bitinterviewdb
+### 2. run คำสั่งใน terminal เพื่อติดตั้ง
+`composer install`
+### 3. แก้ชื่อ file
+>.env.example -> .env
+### 4. ใน file .env
+>DB_DATABASE=bitinterviewdb
+### 5. run คำสั่งใน terminal เพื่อ generate key
+`php artisan key:generate`
+### 6. run คำสั่งใน terminal ด้านล่าง เพื่อสร้าง table
 `php artisan migrate`
-### 3. run คำสั่งใน terminal ด้านล่าง เพื่อ seed ข้อมูล
+### 7. run คำสั่งใน terminal ด้านล่าง เพื่อ seed ข้อมูล
 `php artisan db:seed`
-### 4. run คำสั่งใน terminal ด้านล่าง เพื่อ run project
+### 8. run คำสั่งใน terminal ด้านล่าง เพื่อ run project
 `php artisan serv`
 
 ## ER Diagram
